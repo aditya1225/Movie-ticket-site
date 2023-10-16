@@ -1,0 +1,81 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+<style>
+.prjdiv:hover{
+box-shadow:0 0 20px 0 rgba(0,0,0,0.3);
+transform:translateY(-20px)
+}
+
+ div.transparentbox1
+
+  {
+
+  opacity:0.6;
+
+  filter:alpha(opacity=60);
+
+  }
+
+div.transparentbox1 p
+
+  {
+  margin-top:10%;
+  margin-left:31%;
+  font-weight:bold;
+  font-Size:60px;
+  font-family : 'Monotype Corsiva' ;
+  color : #E6120E;
+  font-weight : bold;
+  text-align:center;
+  }
+
+#circle {
+    background: green;
+    border-radius: 50%;
+    width: 100%;
+    height:60px;
+}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="margin-top:2%">
+                <section id="google-map">
+          <iframe style="height:360px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0860187187227!2d77.51639331435454!3d12.902190190901441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fa7243af9c3%3A0x9bed6669a38d1c3!2sRNS%20INSTITUTE%20OF%20TECHNOLOGY!5e0!3m2!1sen!2sin!4v1605641999553!5m2!1sen!2sin" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </section></div>
+    </div>
+    <h3 style="margin-top:2%">CONTACT US</h3><hr>
+    <div class="row">
+
+        <div class="col-md-6" style="font-size:30px">
+            <p>Email ID : rnsit@gmail.com</p>
+    <p>Contact : +91 26543455</p>
+    <p>Address : R.R. Nagar</p>
+    <p>Office Hours : 10:00 am to 4:00 pm</p>
+    <div class="row">
+    <div class="col-md-2">
+         <div class="transparentbox1">
+        <p id="circle"><i class="fa fa-facebook" style="color:white"></i>
+        </p></div>
+    </div>
+    <div class="col-md-2">
+         <div class="transparentbox1">
+        <p id="circle"><i class="fa fa-whatsapp" style="color:white;"></i>
+        </p></div>
+    </div>
+    <div class="col-md-2">
+         <div class="transparentbox1">
+        <p id="circle"><i class="fa fa-twitter" style="color:white;"></i>
+        </p>
+         </div>
+    </div>
+
+        </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'images/contact.gif' %}" style="width:80%;height:400px">
+        </div>
+    </div>
+
+</div>
+{% endblock %}

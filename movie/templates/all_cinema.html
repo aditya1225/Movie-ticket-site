@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+<script>
+    $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
+
+<div class="container ">
+    <div class="container-fluid">
+        <h1 align="center" style="font-weight:bold;font-family : 'Book Antiqua' ; color : #191970 ;margin-top:4%">All Cinemas</h1>
+        <hr></div>
+                           <table id="myTable" class="table table-bordered"  >
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+                                      <th>Name</th>
+                                      <th>Location</th>
+
+
+                                  </tr>
+                              </thead>
+                              <tbody>
+                              {% for i in data %}
+                                <tr>
+                                  <td>{{forloop.counter}}</td>
+                                  <td>{{i.name1}}</td>
+                                  <td>{{i.location}}</td>
+
+
+                              </tr>
+                              {% endfor %}
+                          </tbody>
+                      </table>
+                  </div>
+{% endblock %}
